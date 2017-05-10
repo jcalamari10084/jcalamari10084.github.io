@@ -1,0 +1,97 @@
+<html>
+	<head>
+		<link type="text/css" rel="stylesheet" href="main.css"/>
+				<style>
+			p{
+			color:blue;
+			font-size:30px;
+			}
+				</style>
+		<title> Jenson's Website </title>
+		<script>
+			function banner(){
+		var text = confirm("Did You Really Want to Click on My Banner?");
+		return text;
+		}
+
+		function answer(){
+		var radio = document.getElementsByName("trivia");
+		var selection = false;
+		var message = "";
+
+		for( var i = 0; i < radio.length; i++) {
+		if(radio[i].value == "Bob" && radio[i].checked == true) {
+		selection = true;
+		} //end if statement
+		} //end for loop
+
+		if(selection == true) {
+		message = message + "<b><p style='color:green'>Way to go!</p></b>";
+		} else {
+		message = message + "<b><p style='color:red'>Try again my friend.</p></b>";
+		}
+		document.getElementById("response").innerHTML = message;
+
+		} //end function answer
+		</script>
+	</head>
+<body id= "background">
+<a href = "http://google.com" onclick = "return banner()">
+	<header id = "header"> <img src="data:image/png;base64,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">
+	</header>
+</a>
+<nav>
+	<ul id = "navmenu">
+		<li class="navitem"> <a href="home.html">Home </a> </li>
+		<li class ="navitem"> <a href="home2.html">Page2</a> </li>
+	</ul>                                                                                                
+</nav>
+<div id = "right">
+	<audio width="100" height="100" controls autoplay>
+		<source src="http://www.w3schools.com/tags/horse.mp3" type="audio/mpeg">
+		Your browser does not support HTML 5 audio.
+	</audio> 
+		<h1>
+			Cool Stuff
+		</h1>
+			<p>
+				<span class="wraptext">
+				Photos, audio, vidoes, etc
+				</span>
+		</p>
+		<div class="wraplist">
+			<ol>
+				<li class="listitem"> Item1 </li>
+				<li class="listitem"> Item2</li>
+				<li class="listitem"> Item3</li>
+			</ol>
+		</div>	
+		<div>
+				<h2>Trivia Question</h2>
+					<p> Who was born in 1993?
+					</p>
+					<div class="wrap-trivia">
+					<form>
+						<div id="response"> </div>
+							<input type="radio" name="trivia" value="Bob">Bob<br>
+							<input type="radio" name="trivia" value="Phil">Phil<br>
+							<input type="radio" name="trivia" value="Nick">Nick<br>
+							<input type="radio" name="trivia" value="Greg">Greg<br>
+							<input type="button" value="Click Here" id="button" onclick = "answer()">
+					</div>
+				</form>
+		</div>
+	</div>
+<div id = "left">
+		<img src="https://images.pexels.com/photos/395196/pexels-photo-395196.jpeg?h=350&auto=compress&cs=tinysrgb"/>
+		<img src="https://images.pexels.com/photos/173383/pexels-photo-173383.jpeg?h=350&auto=compress&cs=tinysrgb"/>
+		<hr>
+		<center>Jenson Thompson</center>
+		<center>
+		<a href="https://www.pexels.com/"> Pexels</a>
+		</center>
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/ltK5c60nBHQ" frameborder="0" allowfullscreen></iframe>
+</div>	
+<footer>Jenson Thompson created this website</footer>
+</body>
+</html>
